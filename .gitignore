@@ -3,4 +3,6 @@ node_modules
 /*.log
 *.lock
 
+.DS_Store
+.idea
 package-lock.json

@@ -1,14 +1,14 @@
 import { h } from 'preact';
-import { Link } from 'preact-router/match';
+import { NavLink } from 'react-router-dom';
 import style from './style.scss';
 
 const Header = () => (
 	<header class={style.header}>
-		<h1>Preact App</h1>
+		<h1>CogFun</h1>
 		<nav>
-			<Link activeClassName={style.active} href="/">Home</Link>
-			<Link activeClassName={style.active} href="/profile">Me</Link>
-			<Link activeClassName={style.active} href="/profile/john">John</Link>
+			{/*<NavLink activeClassName={style.active} to="/">Home</NavLink>*/}
+			{/*<NavLink activeClassName={style.active} to="/profile">Me</NavLink>*/}
+			<NavLink activeClassName={style.active} to="/">About</NavLink>
 		</nav>
 	</header>
 );

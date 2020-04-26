@@ -1,0 +1,51 @@
+@import "src/style/palette";
+@import "src/style/responsive";
+
+.solutionItem {
+  align-items: center;
+  background: $lt-gray;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  color: #a1a1a1;
+  display: flex;
+  flex: 1;
+  font-family: 'Inconsolata', sans-serif;
+  height: 30vw;
+  max-height: 175px;
+  max-width: 130px;
+  padding: 1vw;
+  text-shadow:
+    -1px -1px 0 $lt-gray,
+    1px -1px 0 $lt-gray,
+    -1px 1px 0 $lt-gray,
+    1px 1px 0 $lt-gray;
+
+  @include resp-font-size(17vw);
+
+  .solutionUnderline {
+    align-items: center;
+    border-bottom: 2px solid $gray;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &.filled {
+    color: $black;
+  }
+  &.active {
+    background-color: $yellow;
+    color: $black;
+  }
+
+  &.correct {
+    background-color: green;
+    color: $white;
+  }
+
+  &.wrong {
+    background-color: $red;
+    color: $white;
+  }
+}

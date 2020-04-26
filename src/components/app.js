@@ -1,32 +1,39 @@
-import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import 'preact/debug';
+import { h } from 'preact';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch
+} from 'react-router-dom';
 
 import Header from './header';
-
-// Code-splitting is automated for routes
 import Home from '../routes/home';
-import Profile from '../routes/profile';
 
-export default class App extends Component {
+import { Level1 } from './levels/level1/level1';
 
-	/** Gets fired when the route changes.
-	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-	 *	@param {string} event.url	The newly routed URL
-	 */
-	handleRoute = e => {
-		this.currentUrl = e.url;
-	};
+import 'normalize.css/normalize.css';
+import style from './app.scss';
+import { LevelStateProvider } from "./levels/level-state-provider";
 
-	render() {
-		return (
-			<div id="app">
+
+export const App = () => {
+	return (
+		<div class={style.app}>
+			<Router>
 				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
-			</div>
-		);
-	}
+				<Switch>
+					<LevelStateProvider>
+						<Route path="/">
+							<Level1 />
+						</Route>
+						{/*<Route path="/">*/}
+						{/*	<Home />*/}
+						{/*</Route>*/}
+					</LevelStateProvider>
+				</Switch>
+			</Router>
+		</div>
+	);
 }
+
+export default App;

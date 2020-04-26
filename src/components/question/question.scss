@@ -1,0 +1,32 @@
+@import "src/style/responsive";
+
+.questionContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+
+  .question {
+    display: flex;
+  }
+
+  .questionSubjectContainer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    margin-bottom: 20px;
+
+    .questionSubject {
+      display: flex;
+      font-family: 'Ubuntu Mono', sans-serif;
+
+      @include resp-font-size(15vw);
+    }
+
+    .questionSubjectAlias {
+      margin-top: 22px;
+    }
+  }
+}

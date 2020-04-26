@@ -1,0 +1,25 @@
+@import "src/style/responsive";
+
+.answerItem {
+  align-items: center;
+  background-color: #EFEFEF;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font-family: 'Inconsolata', sans-serif;
+  height: 20vw;
+  justify-content: center;
+  max-height: 135px;
+  transition: opacity 0.25s;
+
+  @include resp-font-size(12vw);
+
+  &.selected {
+    opacity: 0.2;
+  }
+
+  &.disabled {
+    opacity: 0.0;
+  }
+}

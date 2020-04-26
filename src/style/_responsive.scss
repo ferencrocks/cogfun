@@ -1,0 +1,18 @@
+$xs: 768px;
+$sm: 992px;
+$md: 1200px;
+
+@mixin resp-font-size($baseVw) {
+  @media (max-width: $xs) {
+    font-size: $baseVw;
+  }
+  @media (min-width: $xs) and (max-width: $sm) {
+    font-size: $baseVw * ($xs / $sm);
+  }
+  @media (min-width: $sm) and (max-width: $md) {
+    font-size: $baseVw * ($sm / $md);
+  }
+  @media (min-width: $md) {
+    font-size: $baseVw * 0.45;
+  }
+}
