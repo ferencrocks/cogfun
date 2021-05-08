@@ -8,7 +8,7 @@ const Header = () => (
 		<nav>
 			{/*<NavLink activeClassName={style.active} to="/">Home</NavLink>*/}
 			{/*<NavLink activeClassName={style.active} to="/profile">Me</NavLink>*/}
-			<NavLink activeClassName={style.active} to="/">About</NavLink>
+			{/*<NavLink activeClassName={style.active} to="/">About</NavLink>*/}
 		</nav>
 	</header>
 );

@@ -1,10 +1,10 @@
 import 'preact/debug';
 import { h } from 'preact';
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch
-} from 'react-router-dom';
+// import {
+// 	BrowserRouter as Router,
+// 	Route,
+// 	Switch
+// } from 'react-router-dom';
 
 import Header from './header';
 import Home from '../routes/home';
@@ -19,19 +19,19 @@ import { LevelStateProvider } from "./levels/level-state-provider";
 export const App = () => {
 	return (
 		<div class={style.app}>
-			<Router>
+			{/*<Router>*/}
 				<Header />
-				<Switch>
+				{/*<Switch>*/}
 					<LevelStateProvider>
-						<Route path="/">
+						{/*<Route path="/">*/}
 							<Level1 />
-						</Route>
+						{/*</Route>*/}
 						{/*<Route path="/">*/}
 						{/*	<Home />*/}
 						{/*</Route>*/}
 					</LevelStateProvider>
-				</Switch>
-			</Router>
+				{/*</Switch>*/}
+			{/*</Router>*/}
 		</div>
 	);
 }
